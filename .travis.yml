@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t alzobaydee/node .
-  - docker images alzobaydee/node
+  - docker build -t alzobaydee/node .  #<dockeruser/nameofproject>
+  - docker images alzobaydee/node    #<dockeruser/nameofproject>
 
 before_deploy:
-  - docker login -u alzobaydee -p FLAmenco19888 
+  - docker login -u alzobaydee -p FLAmenco19888    # -u <username>  -p <userpassword>
 
 deploy:
   provider: script
-  script: docker push alzobaydee/node
+  script: docker push alzobaydee/node   #<dockeruser/nameofproject>
   on:
     branch: master
