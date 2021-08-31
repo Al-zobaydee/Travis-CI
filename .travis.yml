@@ -3,7 +3,7 @@ services:
   - docker
 
 script:
-  - docker build -t alzobaydee/node
+  - docker build -t alzobaydee/node .
   - docker images alzobaydee/node
 
 before_deploy:
